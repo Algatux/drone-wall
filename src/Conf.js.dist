@@ -1,0 +1,11 @@
+
+class Configuration {
+    hostname = '';
+    repository = {
+        owner: '',
+        name: ''
+    };
+    token = '';
+}
+
+export default Configuration;
