@@ -7,8 +7,8 @@ class BuildRow extends Component {
         super(props);
 
         this.client = new Drone.Client({
-            url: 'https://drone.facile.it',
-            token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZXh0IjoiYWdhbGxpIiwidHlwZSI6InVzZXIifQ.2reUxU-5LXyglPjc_33ONmPJuzeLUNszMD8cD69_IZM'
+            url: '',
+            token: ''
         });
     }
 
