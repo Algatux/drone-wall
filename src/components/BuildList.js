@@ -24,7 +24,7 @@ class BuildList extends ClientComponent {
             <div className="build-list">
                 {this.state.builds.map(function(build, key){
                     return (
-                        <BuildRow status={build.status} author={build.author} key={key}/>
+                        <BuildRow build={build} key={key}/>
                     );
                 })}
 

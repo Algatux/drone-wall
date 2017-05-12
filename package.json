@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "dns": "file:./src/mock/dns",
     "drone-node": "^1.0.1",
-    "dns" : "file:./src/mock/dns",
+    "material-ui": "^0.18.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },

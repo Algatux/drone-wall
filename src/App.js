@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import BuildList from './components/BuildList';
 import './App.css';
 import Configuration from './Conf';
+//import injectTapEventPlugin from 'react-tap-event-plugin';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
+//injectTapEventPlugin();
 
 class App extends Component {
 
@@ -12,12 +16,14 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App">
-                <div className="App-header">
-                    <h2>Drone Wall</h2>
+            <MuiThemeProvider>
+                <div className="App">
+                    <div className="App-header">
+                        <h2>Drone Wall</h2>
+                    </div>
+                    <BuildList owner={this.conf.repository.owner} name={this.conf.repository.name} />
                 </div>
-                <BuildList owner={this.conf.repository.owner} name={this.conf.repository.name} />
-            </div>
+            </MuiThemeProvider>
         );
     }
 }

@@ -1,22 +1,18 @@
 import React, {Component} from 'react';
-import Drone from 'drone-node';
+import Author from './BuildRow/Author'
+import Status from './BuildRow/Status'
+import BuildDetails from './BuildRow/BuildDetails'
+import './BuildRow.css'
 
 class BuildRow extends Component {
-
-    constructor(props) {
-        super(props);
-
-        this.client = new Drone.Client({
-            url: '',
-            token: ''
-        });
-    }
 
     render() {
         return (
             <div className="build-row">
-                <div>{this.props.status}</div>
-                <div>{this.props.author}</div>
+                <Status result={this.props.build.status} >
+                    <Author name={this.props.build.author} avatar={this.props.build.author_avatar} />
+                    <BuildDetails build={this.props.build} />
+                </Status>
             </div>
         );
     }
