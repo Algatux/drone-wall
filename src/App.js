@@ -20,12 +20,12 @@ class App extends Component {
             <MuiThemeProvider>
                 <Grid fluid>
                     <Row>
-                        <Col xs={6} md={3}>
-                            Drone awall
+                        <Col xs={4} md={12}>
+                            Drone wall
                         </Col>
                     </Row>
                     <Row>
-                        <Col xs={6} md={3}>
+                        <Col xs={4} md={12}>
                             <BuildList owner={this.conf.repository.owner} name={this.conf.repository.name} />
                         </Col>
                     </Row>
