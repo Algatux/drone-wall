@@ -4,6 +4,7 @@ import './App.css';
 import Configuration from './Conf';
 //import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 //injectTapEventPlugin();
 
@@ -17,12 +18,18 @@ class App extends Component {
     render() {
         return (
             <MuiThemeProvider>
-                <div className="App">
-                    <div className="App-header">
-                        <h2>Drone Wall</h2>
-                    </div>
-                    <BuildList owner={this.conf.repository.owner} name={this.conf.repository.name} />
-                </div>
+                <Grid fluid>
+                    <Row>
+                        <Col xs={6} md={3}>
+                            Drone awall
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col xs={6} md={3}>
+                            <BuildList owner={this.conf.repository.owner} name={this.conf.repository.name} />
+                        </Col>
+                    </Row>
+                </Grid>
             </MuiThemeProvider>
         );
     }
